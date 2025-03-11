@@ -11,16 +11,7 @@ public class LargestNumber {
         int num3 = scanner.nextInt();
         scanner.close();
 
-        int largest;
-
-        if (num1 >= num2 && num1 >= num3) {
-            largest = num1;
-        } else if (num2 >= num1 && num2 >= num3) {
-            largest = num2;
-        } else {
-            largest = num3;
-        }
-
-        System.out.println("The largest number is: " + largest);
+        int largest = Math.max(num1, Math.max(num2, num3));
+        System.out.println("Largest number: " + largest);
     }
 }
